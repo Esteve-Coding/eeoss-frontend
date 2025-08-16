@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | EEOSS MULTIBIZ VENTURES</title>
+    <title>About Us - EEOSS MULTIBIZ VENTURES</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="navbar">
+           <a href="index.html">
             <img src="assets/images/logo.png" alt="EEOSS Logo" class="logo">
-            <ul class="nav-links">
+            </a>
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -20,40 +28,62 @@
         </nav>
     </header>
 
+<main>
     <!-- About Section -->
     <section class="about">
         <h1>About EEOSS MULTIBIZ VENTURES</h1>
         <p>
-            EEOSS MULTIBIZ VENTURES is a forward-thinking service provider committed to helping
-            businesses and organizations thrive. We specialize in offering administrative, operational,
-            and logistics support to ensure smooth business operations.
+            EEOSS MULTIBIZ VENTURES is a dedicated service provider committed to delivering 
+            professional administrative, operational, and logistics solutions. 
+            Our goal is to help businesses streamline processes, improve efficiency, 
+            and achieve sustainable growth.
         </p>
         <p>
-            Founded by <strong>E_Steve Egbo</strong>, a First Class Honours graduate of Public Administration
-            from the University of Nigeria, Nsukka, EEOSS MULTIBIZ VENTURES stands on the values of 
-            integrity, efficiency, and client satisfaction.
-        </p>
-        <p>
-            We believe that every organization deserves operational excellence without compromise, and our 
-            mission is to make that possible for small, medium, and large businesses alike.
+            Founded on principles of integrity, innovation, and customer satisfaction, 
+            we have built a reputation as a reliable partner for businesses seeking 
+            operational excellence and strategic support.
         </p>
     </section>
 
-    <!-- Vision & Mission -->
+    <!-- Mission & Vision -->
     <section class="vision-mission">
         <div class="vm-card">
-            <h2>Our Vision</h2>
-            <p>To be a trusted leader in providing seamless business support solutions across Nigeria and beyond.</p>
+            <h2>Our Mission</h2>
+            <p>
+                To provide high-quality administrative, operational, and logistics services 
+                that empower businesses to focus on their core objectives while we handle 
+                the critical support functions.
+            </p>
         </div>
         <div class="vm-card">
-            <h2>Our Mission</h2>
-            <p>To empower businesses by handling their operational challenges, allowing them to focus on growth.</p>
+            <h2>Our Vision</h2>
+            <p>
+                To become a leading and trusted partner in business support services, 
+                recognized for our efficiency, innovation, and unwavering commitment 
+                to client success.
+            </p>
         </div>
     </section>
+
+    <a href="https://wa.me/2348103859169" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    
+    <!-- <script src="assets/js/script.js"></script> -->
+    <!-- <script src="js/contact.js"></script> -->
+     <script src="js/contact.js?v=2" defer></script>
+
 </body>
 </html>

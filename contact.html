@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | EEOSS MULTIBIZ VENTURES</title>
+    <title>Contact - EEOSS MULTIBIZ VENTURES</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <nav class="navbar">
+            <a href="index.html">
             <img src="assets/images/logo.png" alt="EEOSS Logo" class="logo">
-            <ul class="nav-links">
+            </a>
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -20,39 +28,99 @@
         </nav>
     </header>
 
+<main>
     <!-- Contact Section -->
     <section class="contact-page">
-        <h1>Get in Touch</h1>
-        <p>We’re here to help. Fill out the form below or reach us directly via phone or email.</p>
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Whether you have questions, requests, or just want to say hello, feel free to reach out.</p>
 
         <div class="contact-container">
             <!-- Contact Form -->
-            <!-- <form action="/send-message" method="POST" class="contact-form"> -->
-            <form id="contactForm" class="contact-form">
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-    <input type="text" id="phone" name="phone" placeholder="Your Phone Number">
-    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
-            <p id="status"></p>
-
-            <!-- Contact Details -->
-            <div class="contact-details">
-                <h2>Our Contact Information</h2>
-                <p><strong>Phone:</strong> <a href="tel:+2348103859169">0810 385 9169</a></p>
-                <p><strong>Email:</strong> <a href="mailto:eeossmultibiz@gmail.com">eeossmultibiz@gmail.com</a></p>
-                <p><strong>Address:</strong> Virtual Office – Nigeria</p>
-                <p><strong>WhatsApp:</strong> <a href="https://wa.me/2348103859169" target="_blank">Chat with us</a></p>
+            <div class="contact-form-container">
+                 <p id="status"></p>
+                <h2>Send Us a Message</h2>
+                <!-- <form action="#" method="post" class="contact-form"> -->
+                <form action="/send-message" method="POST" id="contactForm" class="contact-form">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number" required>
+                    <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+               
+                <br>
+                <h4>Follow Us</h4>
+            <p>
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">LinkedIn</a>
+            </p>
             </div>
-        </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div>
+                <h2>Get in Touch</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Blk F Flt 1 Maryland Estate, Enugu, Nigeria</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+2348103859169">+234 810 385 9169</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:eeossmultibiz@gmail.com">info@eeossmultibiz.com</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2348103859169" target="_blank">Chat on WhatsApp</a></p>
+                </div>
+
+                <div class="map-contain">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.993675873213!2d3.379205315331826!3d6.524379425250492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b246f6d5df1%3A0x8c4bdb1d8d4f1!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1615970857514!5m2!1sen!2sng" 
+                        width="100%" 
+                        height="350" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+     </div>
+
+        <!-- Google Map -->
+        <!-- <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.993675873213!2d3.379205315331826!3d6.524379425250492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b246f6d5df1%3A0x8c4bdb1d8d4f1!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1615970857514!5m2!1sen!2sng" 
+                width="100%" 
+                height="350" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div> -->
     </section>
+
+      <a href="https://wa.me/2348103859169" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+            </div>
+            <!-- <div class="footer-contact-form">
+                <h4>Quick Contact</h4>
+                <form action="#" method="post" class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div> -->
+        </div>
     </footer>
+   
+    <!-- <script src="assets/js/script.js"></script> -->
+     <!-- <script src="js/contact.js"></script> -->
+      <script src="js/contact.js?v=2" defer></script>
 
-    <script src="js/contact.js?v=2" defer></script>
+
 </body>
 </html>

@@ -1,3 +1,17 @@
+/* ==============================
+   MOBILE MENU TOGGLE
+============================== */
+document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.querySelector("#menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (navToggle) {
+        navToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
@@ -53,3 +67,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+/* ==============================
+   WHATSAPP CLICK-TO-CHAT
+============================== */
+document.addEventListener("DOMContentLoaded", function () {
+    const whatsappBtn = document.querySelector("#whatsapp-btn");
+
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener("click", function () {
+            const phoneNumber = "2348103859169"; // Replace with EEOSS WhatsApp number
+            const defaultMessage = encodeURIComponent("Hello, I’d like to inquire about your services.");
+            window.open(`https://wa.me/${phoneNumber}?text=${defaultMessage}`, "_blank");
+        });
+    }
+});
+
+// ===== MOBILE MENU TOGGLE =====
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+}
+
+// ===== FLOATING WHATSAPP BUTTON =====
+const whatsappBtn = document.querySelector(".whatsapp-float");
+
+if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", () => {
+        const phoneNumber = "2348103859169"; // Replace with EEOSS WhatsApp number (no + or spaces)
+        const message = encodeURIComponent("Hello EEOSS, I would like to inquire about your services.");
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    });
+}

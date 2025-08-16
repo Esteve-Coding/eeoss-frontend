@@ -1,10 +1,34 @@
-body {
+/* General Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make footer stick to the bottom when content is short */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Push footer down */
+}
+
+
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: #F4F4F4;
     color: #333;
+    line-height: 1.6;
 }
 
+/* Header & Navbar */
 header {
     background-color: #1F4E79;
     padding: 10px 20px;
@@ -14,10 +38,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navbar .logo {
-    height: 50px;
+    height: 75px;
+}
+
+.logo {
+    background-color: white;
+    /* padding: 5px; */
+    border-radius: 5px;
 }
 
 .nav-links {
@@ -32,11 +63,40 @@ header {
     font-weight: bold;
 }
 
+.nav-links .active {
+    border-bottom: 2px solid #D4AF37;
+}
+.nav-links a:hover,
+.nav-links .active { border-bottom: 2px solid #D4AF37; }
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 30px;
+}
+
+/* Hero Section */
 .hero {
     background-color: #1F4E79;
     color: white;
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 .hero .btn {
@@ -47,8 +107,37 @@ header {
     border-radius: 5px;
 }
 
+/* ===== NEW: Testimonials ===== */
+.testimonials {
+    background: #fff;
+    padding: 60px 20px;
+}
+.testimonials h2 { text-align: center; margin-bottom: 20px; }
+.testimonial-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+.testimonial {
+    background: #F8FAFC;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    line-height: 1.6;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.testimonial .name { margin-top: 10px; font-weight: 700; color: #1F4E79; }
+
+.testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Services Overview */
 .services-overview {
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -56,6 +145,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -64,45 +154,16 @@ header {
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
     width: 250px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
-footer {
-    background-color: #1F4E79;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-}
-
-.about {
-    padding: 40px;
-    background-color: white;
-    max-width: 900px;
-    margin: auto;
-    line-height: 1.6;
-}
-
-.vision-mission {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-}
-
-.vm-card {
-    background-color: #1F4E79;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-}
-
-.nav-links .active {
-    border-bottom: 2px solid #D4AF37;
-}
-
+/* Services Page */
 .services-page {
-    padding: 40px;
+    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
     background-color: white;
@@ -120,6 +181,7 @@ footer {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-item h2 {
@@ -127,12 +189,43 @@ footer {
     margin-bottom: 10px;
 }
 
-.nav-links .active {
-    border-bottom: 2px solid #D4AF37;
+.service-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+/* About Page */
+.about {
+    padding: 40px 20px;
+    background-color: white;
+    max-width: 900px;
+    margin: auto;
 }
 
+.vision-mission {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.vm-card {
+    background-color: #1F4E79;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.vm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Contact Page */
 .contact-page {
-    padding: 40px;
+    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
     background-color: white;
@@ -141,13 +234,22 @@ footer {
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 3%;
     margin-top: 30px;
+    width: 100%;
+}
+
+.contact-form-container{
+    width: 30%;
+}
+
+.contact-info{
+    width: 67%;
 }
 
 .contact-form {
     flex: 1;
-    min-width: 300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -188,3 +290,79 @@ footer {
     text-decoration: none;
 }
 
+.contact-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map-contain{
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #1F4E79;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    /* position: fixed;
+    bottom: 75px;
+    right: 20px;
+    z-index: 100;
+    color: green; */
+    position: fixed;
+    right: 5px;
+    bottom: 25px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1F4E79;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .contact-container {
+    display: block;
+   
+    width: 100%;
+}
+
+.contact-form-container{
+    width: 100%;
+}
+
+.contact-info{
+    width: 100%;
+}
+}

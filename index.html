@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEOSS MULTIBIZ VENTURES</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav class="navbar">
+            <a href="index.html">
             <img src="assets/images/logo.png" alt="EEOSS Logo" class="logo">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+            </a>
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -20,6 +28,7 @@
         </nav>
     </header>
 
+<main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
@@ -48,9 +57,45 @@
         </div>
     </section>
 
+    <!-- Testimonials -->
+<section class="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            “EEOSS streamlined our operations. Communication was fast, and deliverables were always on time.”
+            <div class="name">— Aisha O., Retail SME</div>
+        </div>
+        <div class="testimonial">
+            “Professional support for our admin processes. We saved hours weekly and reduced errors.”
+            <div class="name">— Kelechi N., Logistics Startup</div>
+        </div>
+        <div class="testimonial">
+            “Dependable, organized, and proactive. Highly recommended for growing businesses.”
+            <div class="name">— Tolu A., Consultancy</div>
+        </div>
+    </div>
+</section>
+
+    <a href="https://wa.me/2348103859169" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</main>    
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 EEOSS MULTIBIZ VENTURES | All Rights Reserved</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    
+    <!-- <script src="assets/js/script.js"></script> -->
+     <!-- <script src="js/contact.js"></script> -->
+      <script src="js/contact.js?v=2" defer></script>
+
+
 </body>
 </html>

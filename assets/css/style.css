@@ -63,6 +63,20 @@ header {
     font-weight: bold;
 }
 
+.follow a{
+    text-decoration: none;
+    font-size: 30px;
+}
+#fac{
+    color: blue;
+}
+#ins{
+    color: red;
+}
+#lin{
+    color: #1F4E79;
+}
+
 .nav-links .active {
     border-bottom: 2px solid #D4AF37;
 }
